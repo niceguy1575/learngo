@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"learngo/part1"
+	"learngo/part2"
 )
 
 /* go는 compile할때 특정 function을 찾는다. == go의 시작점 */
@@ -45,4 +46,17 @@ func main() {
 
 	part1.RepeatMe("hi", "hi2", "hi3", "hi4")
 
+	/* naked return => defer */
+	/* defer: 함수가 끝난 이후 무언가를 실행시킴*/
+	totalLength2, upperName2 := part1.LenAndUpper2("niceguy1575")
+	fmt.Println(totalLength2, upperName2)
+
+	/******************************************
+		This is part 2. for / range / ... args
+	*******************************************/
+
+	/* go에는 foreach 등이 없음 #part2.superAdd(1, 2, 3, 4, 5, 6) */
+	part2.Hello()
+	result := part2.SuperAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
